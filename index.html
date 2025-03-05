@@ -3,36 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TGBotMaker - Custom Telegram Bots</title>
+    <title>TGBotMaker</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>TGBotMaker</h1>
-        <p>Request your custom Telegram bot, and we'll build it for you!</p>
-    </header>
+    <div class="container">
+        <div class="page" id="page1">
+            <h1>Welcome to TGBotMaker</h1>
+            <p>We create custom Telegram bots to solve your problems. Our team is dedicated to providing the best automated solutions for your needs.</p>
+            <p>Benefits of choosing us:
+                <ul>
+                    <li>Fast and Reliable Bots</li>
+                    <li>Affordable Pricing</li>
+                    <li>Easy Customization</li>
+                    <li>24/7 Support</li>
+                </ul>
+            </p>
+            <button onclick="nextPage(2)">Next</button>
+        </div>
 
-    <section class="request-form">
-        <h2>Request a Telegram Bot</h2>
-        <form id="botRequestForm">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
+        <div class="page" id="page2" style="display:none;">
+            <h1>Pricing & Plans</h1>
+            <p>Choose a plan that fits your needs.</p>
+            <ul>
+                <li>Basic Plan - $10</li>
+                <li>Standard Plan - $25</li>
+                <li>Premium Plan - $50</li>
+            </ul>
+            <button onclick="nextPage(3)">Next</button>
+        </div>
 
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required>
+        <div class="page" id="page3" style="display:none;">
+            <h1>Payment</h1>
+            <p>Select your payment method:</p>
+            <form>
+                <label><input type="radio" name="payment" value="paypal"> PayPal</label>
+                <label><input type="radio" name="payment" value="creditcard"> Credit Card</label>
+                <label><input type="radio" name="payment" value="crypto"> Cryptocurrency</label>
+            </form>
+            <button onclick="nextPage(4)">Next</button>
+        </div>
 
-            <label for="botDescription">Bot Description:</label>
-            <textarea id="botDescription" name="botDescription" rows="4" required></textarea>
+        <div class="page" id="page4" style="display:none;">
+            <h1>Choose Your Bot</h1>
+            <p>Describe the bot you need:</p>
+            <textarea placeholder="Describe your bot..."></textarea>
+            <button onclick="submitRequest()">Submit</button>
+        </div>
+    </div>
 
-            <button type="submit">Submit Request</button>
-        </form>
-        <p id="confirmationMessage" class="hidden">Request submitted! We'll contact you soon.</p>
-    </section>
+    <script>
+        function nextPage(pageNumber) {
+            document.querySelectorAll('.page').forEach(page => page.style.display = 'none');
+            document.getElementById(`page${pageNumber}`).style.display = 'block';
+        }
 
-    <footer>
-        <p>© 2025 TGBotMaker. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+        function submitRequest() {
+            alert("Your request has been submitted!");
+        }
+    </script>
 </body>
 </html>
+
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.page {
+    padding: 20px;
+}
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
