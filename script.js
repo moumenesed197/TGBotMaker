@@ -1,12 +1,9 @@
 document.getElementById("botRequestForm").addEventListener("submit", function(event) {
-    event.preventDefault();
+    event.preventDefault(); // Prevent form refresh
 
-    // Simulate sending the request (replace with real backend later)
-    document.getElementById("confirmationMessage").style.display = "block";
+    // Show confirmation message
+    document.getElementById("confirmationMessage").classList.remove("hidden");
 
-    // Clear form
-    setTimeout(() => {
-        document.getElementById("botRequestForm").reset();
-        document.getElementById("confirmationMessage").style.display = "none";
-    }, 3000);
+    // Clear form fields
+    this.reset();
 });
