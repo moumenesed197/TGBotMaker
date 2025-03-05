@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TGBotMaker - Custom Telegram Bots</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <h1>TGBotMaker</h1>
-        <p>Get a custom Telegram bot tailored to your needs!</p>
+        <p>Request your custom Telegram bot, and we'll build it for you!</p>
     </header>
 
-    <section class="form-section">
-        <h2>Request Your Custom Bot</h2>
+    <section class="request-form">
+        <h2>Request a Telegram Bot</h2>
         <form id="botRequestForm">
             <label for="name">Your Name:</label>
-            <input type="text" id="name" required>
+            <input type="text" id="name" name="name" required>
 
             <label for="email">Your Email:</label>
-            <input type="email" id="email" required>
+            <input type="email" id="email" name="email" required>
 
-            <label for="botDescription">Describe Your Bot:</label>
-            <textarea id="botDescription" required></textarea>
+            <label for="botDescription">Bot Description:</label>
+            <textarea id="botDescription" name="botDescription" rows="4" required></textarea>
 
             <button type="submit">Submit Request</button>
         </form>
-        <p id="confirmationMessage" style="display: none; color: green;">Request sent successfully!</p>
+        <p id="confirmationMessage" class="hidden">Request submitted! We'll contact you soon.</p>
     </section>
+
+    <footer>
+        <p>© 2025 TGBotMaker. All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
