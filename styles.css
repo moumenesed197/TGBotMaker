@@ -1,73 +1,39 @@
-/* Global Styles */
+/* styles.css */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
-    text-align: center;
 }
-
-/* Header */
-header {
-    background: #007bff;
-    color: white;
+.container {
+    width: 60%;
+    margin: auto;
     padding: 20px;
-}
-
-/* Form Section */
-.request-form {
     background: white;
-    padding: 20px;
-    max-width: 400px;
-    margin: 20px auto;
-    border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
-
-.request-form h2 {
-    color: #007bff;
+.page {
+    padding: 20px;
 }
-
-label {
-    display: block;
-    margin: 10px 0 5px;
-    font-weight: bold;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
 button {
-    background: #007bff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #007bff;
     color: white;
     border: none;
-    padding: 10px;
-    width: 100%;
-    cursor: pointer;
     border-radius: 5px;
+    cursor: pointer;
 }
-
 button:hover {
-    background: #0056b3;
+    background-color: #0056b3;
 }
-
-/* Footer */
-footer {
-    margin-top: 20px;
-    padding: 10px;
-    background: #222;
-    color: white;
-}
-
-/* Confirmation Message */
-.hidden {
-    display: none;
-    color: green;
-    font-weight: bold;
+textarea {
+    width: 100%;
+    height: 100px;
     margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
 }
